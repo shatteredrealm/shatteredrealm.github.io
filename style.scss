@@ -1,0 +1,139 @@
+---
+---
+@import 'reset.scss';
+@import 'phb.fonts.scss';
+@import 'phb.assets.scss';
+@import 'phb.depricated.scss';
+@import 'phb.style.scss';
+
+
+a {
+    &:link,
+    &:visited {
+        color: $headerText;
+    }
+
+    &:hover,
+    &:focus {
+        color: rgba(black, 0.75);
+    }
+    &:active {
+        color: $horizontalRule;
+    }
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.phb {
+    overflow: scroll !important;
+    height: auto !important;
+    width: auto !important;
+    font-size: 1em !important;
+    min-height: 100vh;
+    padding:0;
+    margin:0;
+    column-count: unset !important;
+
+    h1 {
+        font-size: 300%;
+    }
+
+    h2 {
+        font-size: 175%;
+        page-break-before:avoid;
+    }
+    p + h2,
+    ul + h2,
+    ol + h2 {
+        margin-top: 1em;
+    }
+
+    h3 {
+        font-size: 150%;
+    }
+
+    h4,h5 {
+        font-size: 125%;
+    }
+}
+
+#banner {
+    background: #202020 url('/images/banner.jpg') top left no-repeat;
+    background-size: cover;
+    color:white;
+    padding: 4em;
+
+    a,:link {
+        color: white;
+        color: rgba(255,255,255,.95);
+        text-decoration:none;
+    }
+
+    .home & {
+        min-height: 70vh;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items:center;
+
+        h1 {
+            font-size: 500%;
+            -webkit-text-stroke: 2px black;
+        }
+    }
+
+    h1 {
+        font-family: modesto-condensed, serif;
+        font-weight: normal;
+        font-size: 200%;
+        text-transform: uppercase;
+    }
+}
+
+#main {
+    padding: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.shields {
+    list-style:none;
+    margin-left:0;
+    padding-left:0;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 125%;
+
+    a,:link,:visited {
+        text-decoration:none;
+        background: rgba(255,255,255,0.125);
+        border: 1px solid $headerUnderline;
+        display:block;
+        padding: 1rem;
+    }
+
+    a:hover,a:focus,a:active {
+        background: rgba(255,255,255,0.5);
+    }
+    li {
+        margin-bottom: 2rem;
+        text-align: center;
+        width: 32%;
+        display:block;
+        img {
+            display:block;
+            width:300px;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: .5rem;
+        }
+    }
+}

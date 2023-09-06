@@ -1,0 +1,31 @@
+title: The Shattered Realm
+baseurl: ""
+sass:
+  sass_dir: _sass
+  style: compressed
+permalink: pretty
+
+collections:
+  chapters:
+    output: true
+  characters:
+    output: true
+  shields:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "shields"
+    values:
+      layout: "page"
